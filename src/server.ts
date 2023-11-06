@@ -24,13 +24,13 @@ app.get('/salary/player/:id', async (req: Request, res: Response) => {
         const salaryService = new SalaryService(data);
 
         try {
-            const player: Player =  salaryService.getPlayer(playerId);
+            const player: Player = salaryService.getPlayer(playerId);
             res.status(200).json({
-                id: player.id, 
+                id: player.id,
                 name: player.name,
                 totalSalary: salaryService.getSalary(playerId)
             });
-        } catch(err) {
+        } catch (err) {
             res.status(404).send();
         }
     }

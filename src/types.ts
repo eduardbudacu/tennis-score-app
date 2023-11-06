@@ -13,6 +13,6 @@ export type Match = {
 }
 
 export type PlayerData = {
-    players: Player[],
-    matches: Match[],
+    players: Player[];
+    matches: Match[];
 }

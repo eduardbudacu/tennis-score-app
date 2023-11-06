@@ -28,9 +28,9 @@ export default class DataProvider {
                                 playerId: el.playerId,
                                 opponentId: el.opponentId,
                                 result: el.result && Array.isArray(el.result) ? el.result.map((set: any): [number, number] => [set[0], set[1]]) : [],
-                                aces: el.aces && Array.isArray(el.aces) ? [el.aces[0], el.aces[1]] : [0,0],
-                                smashedRackets:  el.smashedRackets && Array.isArray(el.smashedRackets) ? [el.smashedRackets[0], el.smashedRackets[1]] : [0,0],
-                                doubleFaults: el.doubleFaults && Array.isArray(el.doubleFaults) ? [el.doubleFaults[0], el.doubleFaults[1]] : [0,0],
+                                aces: el.aces && Array.isArray(el.aces) ? [el.aces[0], el.aces[1]] : [0, 0],
+                                smashedRackets: el.smashedRackets && Array.isArray(el.smashedRackets) ? [el.smashedRackets[0], el.smashedRackets[1]] : [0, 0],
+                                doubleFaults: el.doubleFaults && Array.isArray(el.doubleFaults) ? [el.doubleFaults[0], el.doubleFaults[1]] : [0, 0],
                             }
                         })
                     }

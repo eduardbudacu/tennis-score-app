@@ -11,7 +11,7 @@ export default class SalaryService {
 
     constructor(
         protected data: PlayerData
-    ) {}
+    ) { }
 
     public getPlayer(playerId: number): Player {
         let player: Player = this.data.players.find((el: Player) => el.id === playerId);
@@ -25,7 +25,7 @@ export default class SalaryService {
         let totalSalary: number = 0;
         let matches: Match[] = this.data.matches.filter((el: Match) => el.playerId === playerId || el.opponentId === playerId);
         totalSalary += matches.length * SalaryService.MATCH_PRICE;
-        
+
         matches.forEach((match: Match) => {
             const position = match.playerId === playerId ? 0 : 1;
             const opponent = position === 1 ? 0 : 1;
@@ -35,7 +35,7 @@ export default class SalaryService {
                 return acc + currentValue[position]
             }, 0) * SalaryService.GAME_WON_PRICE;
 
-            const setsWonByPlayer: [number, number][] = match.result.filter((set: [number, number]) => {return set[position] > set[opponent];})
+            const setsWonByPlayer: [number, number][] = match.result.filter((set: [number, number]) => { return set[position] > set[opponent]; })
             totalSalary += setsWonByPlayer.length * SalaryService.SET_WON_PRICE;
 
             if (setsWonByPlayer.length === 3) {
@@ -44,7 +44,7 @@ export default class SalaryService {
 
             totalSalary += match.aces[position] * SalaryService.ACE_PRICE;
             totalSalary += match.smashedRackets[position] * SalaryService.SMASHED_RACKET_PRICE;
-            totalSalary += match.doubleFaults[position] * SalaryService.DOUBLE_FAULT_PRICE; 
+            totalSalary += match.doubleFaults[position] * SalaryService.DOUBLE_FAULT_PRICE;
         })
 
         return totalSalary;
