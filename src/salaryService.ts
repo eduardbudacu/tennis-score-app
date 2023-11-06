@@ -36,10 +36,9 @@ export default class SalaryService {
             }, 0) * SalaryService.GAME_WON_PRICE;
 
             const setsWonByPlayer: [number, number][] = match.result.filter((set: [number, number]) => {return set[position] > set[opponent];})
-            const setsWonByOpponent: [number, number][] = match.result.filter((set: [number, number]) => {return set[position] < set[opponent];})
             totalSalary += setsWonByPlayer.length * SalaryService.SET_WON_PRICE;
 
-            if (setsWonByPlayer.length > setsWonByOpponent.length) {
+            if (setsWonByPlayer.length === 3) {
                 totalSalary += SalaryService.MATCH_WON_PRICE;
             }
 

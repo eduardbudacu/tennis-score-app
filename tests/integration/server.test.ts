@@ -2,7 +2,7 @@ import app from '../../src/server';
 import supertest from 'supertest';
 
 describe("test add function", () => {
-    it("should respond with 404 for non existing endpoint",async () => {
+    it("should respond with 404 for non existing endpoint", async () => {
         const response = await supertest(app)
             .get('/not-available')
             .expect(404);
@@ -28,5 +28,5 @@ describe("test add function", () => {
         const response = await supertest(app)
             .get('/salary/player/abc1')
             .expect(404);
-    })
+    });
 });
