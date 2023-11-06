@@ -1,0 +1,70 @@
+[{
+  "players": [
+    {
+      "id": 1,
+      "name": "Novak Djokovic"
+    },
+     {
+      "id": 2,
+      "name": "Daniil Medvedev"
+    },
+    {
+      "id": 3,
+      "name": "Rafael Nadal"
+    },
+    {
+      "id": 4,
+      "name": "Stefanos Tsitsipas"
+    }
+  ],
+  "matches": [
+    {
+      "playerId": 1,
+      "opponentId": 2,
+      "result": [[6,2],[4,6],[7,5],[5,7],[6,1]],
+      "aces": [6,15],
+      "smashedRackets":[2,1],
+      "doubleFaults": [3,4]
+    },
+    {
+      "playerId": 1,
+      "opponentId": 3,
+      "result": [[6,2],[4,6],[3,6],[2,6]],
+      "aces": [6,15],
+      "smashedRackets":[4,1],
+      "doubleFaults": [4,4]
+    },
+    {
+      "playerId": 1,
+      "opponentId": 4,
+      "result": [[6,2],[6,4],[6,0]],
+      "aces": [6,15],
+      "smashedRackets":[0,4],
+      "doubleFaults": [8,4]
+    },
+    {
+      "playerId": 2,
+      "opponentId": 3,
+      "result": [[1,6],[2,6],[3,6]],
+      "aces": [6,15],
+      "smashedRackets":[0,4],
+      "doubleFaults": [5,4]
+    },
+    {
+      "playerId": 2,
+      "opponentId": 4,
+      "result": [[6,2],[4,6],[3,6],[7,5],[7,5]],
+      "aces": [12,15],
+      "smashedRackets":[2,1],
+      "doubleFaults": [1,4]
+    },
+    {
+      "playerId": 3,
+      "opponentId": 4,
+      "result": [[6,0],[6,2],[6,0]],
+      "aces": [12,2],
+      "smashedRackets":[1,5],
+      "doubleFaults": [3,12]
+    }
+  ]
+}]
