@@ -1,5 +1,5 @@
 import DataProvider  from '../../src/dataProvider';
-import data from '../../src/data/player_data.json';
+import data from '../../data/player_data.json';
 
 describe("test data provider", () => {
 

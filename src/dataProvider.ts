@@ -5,7 +5,7 @@ import { PlayerData, Player, Match } from './types';
 export default class DataProvider {
     public load(): Promise<PlayerData> {
         return new Promise((resolve, reject) => {
-            fs.readFile(path.resolve(__dirname, 'data/player_data.json'), (err: Error, data: Buffer) => {
+            fs.readFile(path.resolve(__dirname, '../data/player_data.json'), (err: Error, data: Buffer) => {
                 if (!err) {
                     const [parsedData] = JSON.parse(data.toString());
 
