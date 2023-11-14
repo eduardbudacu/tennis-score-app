@@ -8,10 +8,10 @@ const app: Express = express();
 
 app.use(express.json());
 
+var data: PlayerData;
+
 app.get('/salary/player/:id', async (req: Request, res: Response) => {
     const { id } = req.params;
-
-    let data: PlayerData;
 
     if (!data) {
         data = await (new DataProvider).load();
