@@ -19,8 +19,11 @@ module.exports = {
     ],
     "parserOptions": {
         "ecmaVersion": "latest",
-        "sourceType": "module"
+        "sourceType": "module",
+        "project": "tsconfig.test.json",
+        tsconfigRootDir: __dirname, 
     },
     "rules": {
+        "@typescript-eslint/semi": [2, "always"]
     }
 }
