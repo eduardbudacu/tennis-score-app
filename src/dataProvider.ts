@@ -6,7 +6,7 @@ export default class DataProvider {
   public async load (): Promise<PlayerData> {
     return await new Promise((resolve, reject) => {
       fs.readFile(path.resolve(__dirname, '../data/player_data.json'), (err: Error, data: Buffer) => {
-        if (err === undefined) {
+        if (err === null) {
           const [parsedData] = JSON.parse(data.toString());
 
           const result: PlayerData = {
