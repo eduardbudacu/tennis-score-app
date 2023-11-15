@@ -3,10 +3,12 @@ export type Player = {
     name: string;
 }
 
+export type Set = [number, number];
+
 export type Match = {
     playerId: number;
     opponentId: number;
-    result: [number, number][];
+    result: Set[];
     aces: [number, number];
     smashedRackets: [number, number];
     doubleFaults: [number, number];
